@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Tutorial.Screens;
+using Tutorial.Utilities;
 
 namespace Tutorial
 {
@@ -15,7 +16,8 @@ namespace Tutorial
         public Vector2 Dimensions { private set; get; }
         public ContentManager Content { private set; get; }
 
-        GameScreen currentScreen;
+        private XmlManager<GameScreen> xmlGameScreenManager;
+        private GameScreen currentScreen;
 
         private static ScreenManager instance;
 
@@ -32,6 +34,9 @@ namespace Tutorial
         public ScreenManager() {
             Dimensions = new Vector2(640, 480);
             currentScreen = new SplashScreen();
+            xmlGameScreenManager = new XmlManager<GameScreen>();
+            xmlGameScreenManager.Type = currentScreen.Type;
+            currentScreen = xmlGameScreenManager.Load("Load/SplashScreen.xml");
         }
 
         public virtual void LoadContent(ContentManager Content) {

@@ -6,10 +6,17 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Xml.Serialization;
 
 namespace Tutorial.Screens {
     public class GameScreen {
         protected ContentManager content;
+        [XmlIgnore]
+        public Type Type;
+
+        public GameScreen() {
+            Type = this.GetType();
+        }
 
         public virtual void LoadContent() {
             content = 
