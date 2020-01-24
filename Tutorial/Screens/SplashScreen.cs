@@ -24,8 +24,7 @@ namespace Tutorial.Screens {
             base.Update(gameTime);
             image.Update(gameTime);
 
-            if(Keyboard.GetState().IsKeyDown(Keys.Enter) &&
-                ScreenManager.Instance.isTransitioning == false) {
+            if(InputManager.Instance.KeyRelesed(Keys.Enter, Keys.Z)) {
                 ScreenManager.Instance.ChangeScreens("SplashScreen");
             }
         }

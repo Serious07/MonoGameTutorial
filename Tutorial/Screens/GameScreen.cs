@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Xml.Serialization;
+using Tutorial.Utilities;
 
 namespace Tutorial.Screens {
     public class GameScreen {
@@ -30,7 +31,7 @@ namespace Tutorial.Screens {
         }
 
         public virtual void Update(GameTime gameTime) {
-
+            InputManager.Instance.Update();
         }
 
         public virtual void Draw(SpriteBatch spriteBatch) {

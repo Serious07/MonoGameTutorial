@@ -54,6 +54,7 @@
     <Compile Include="Screens\SplashScreen.cs" />
     <Compile Include="Utilities\Image.cs" />
     <Compile Include="Effects\ImageEffect.cs" />
+    <Compile Include="Utilities\InputManager.cs" />
     <Compile Include="Utilities\XmlManager.cs" />
   </ItemGroup>
   <ItemGroup>
