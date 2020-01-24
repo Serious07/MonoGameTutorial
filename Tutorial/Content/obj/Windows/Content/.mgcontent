@@ -5,8 +5,10 @@
   <Config />
   <SourceFiles>
     <File>F:/Files/My_workshop/C#/MonoGame/Tutorial/MonoGameTutorial/Tutorial/Content/Fonts/defaultFont.spritefont</File>
+    <File>F:/Files/My_workshop/C#/MonoGame/Tutorial/MonoGameTutorial/Tutorial/Content/SplashScreen/Image.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>
 </SourceFileCollection>

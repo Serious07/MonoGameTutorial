@@ -44,3 +44,4 @@ F:\Files\My_workshop\C#\MonoGame\Tutorial\MonoGameTutorial\Tutorial\obj\x86\Debu
 F:\Files\My_workshop\C#\MonoGame\Tutorial\MonoGameTutorial\Tutorial\obj\x86\Debug\Tutorial.exe
 F:\Files\My_workshop\C#\MonoGame\Tutorial\MonoGameTutorial\Tutorial\obj\x86\Debug\Tutorial.pdb
 F:\Files\My_workshop\C#\MonoGame\Tutorial\MonoGameTutorial\Tutorial\bin\Windows\x86\Debug\Content\Fonts\defaultFont.xnb
+F:\Files\My_workshop\C#\MonoGame\Tutorial\MonoGameTutorial\Tutorial\bin\Windows\x86\Debug\Content\SplashScreen\Image.xnb

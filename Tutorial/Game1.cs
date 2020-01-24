@@ -89,10 +89,13 @@ namespace Tutorial
         /// </summary>
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime) {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.White);
 
             // TODO: Add your drawing code here
+            spriteBatch.Begin();
             ScreenManager.Instance.Draw(spriteBatch);
+            spriteBatch.End();
+
             DrawFPSCounter(gameTime);
 
             base.Draw(gameTime);
@@ -101,10 +104,10 @@ namespace Tutorial
         public virtual void DrawFPSCounter(GameTime gameTime) {
             var deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
             _frameCounter.Update(deltaTime);
-            var fps = string.Format("FPS: {0}", _frameCounter.AverageFramesPerSecond);
+            var fps = string.Format("FPS: {0}", (int)System.Math.Ceiling(_frameCounter.AverageFramesPerSecond));
 
             spriteBatch.Begin();
-            spriteBatch.DrawString(font, fps, new Vector2(1, 1), Color.White);
+            spriteBatch.DrawString(font, fps, new Vector2(1, 1), Color.Green);
             spriteBatch.End();
         }
     }
