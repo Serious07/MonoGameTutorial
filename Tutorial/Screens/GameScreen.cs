@@ -12,10 +12,12 @@ namespace Tutorial.Screens {
     public class GameScreen {
         protected ContentManager content;
         [XmlIgnore]
-        public Type Type;
+        public Type type;
+        public string xmlPath;
 
         public GameScreen() {
-            Type = this.GetType();
+            type = this.GetType();
+            xmlPath = "Load/" + type.ToString().Replace("Tutorial.Screens.", "") + ".xml";
         }
 
         public virtual void LoadContent() {

@@ -45,3 +45,4 @@ F:\Files\My_workshop\C#\MonoGame\Tutorial\MonoGameTutorial\Tutorial\SharpDX.DXGI
 F:\Files\My_workshop\C#\MonoGame\Tutorial\MonoGameTutorial\Tutorial\SharpDX.Direct3D11.xml
 F:\Files\My_workshop\C#\MonoGame\Tutorial\MonoGameTutorial\Tutorial\SharpDX.Direct2D1.xml
 F:\Files\My_workshop\C#\MonoGame\Tutorial\MonoGameTutorial\Tutorial\SharpDX.XInput.xml
+F:\Files\My_workshop\C#\MonoGame\Tutorial\MonoGameTutorial\Tutorial\Content\SplashScreen\FadeImage.xnb

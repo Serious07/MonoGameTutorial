@@ -9,6 +9,11 @@ using System.IO;
 namespace Tutorial.Utilities {
     public class XmlManager<T> {
         public Type Type { get; set; }
+
+        public XmlManager() {
+            Type = typeof(T);
+        }
+
         public T Load(string path) {
             T instance;
 

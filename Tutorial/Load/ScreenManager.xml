@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<ScreenManager>
+  <image>
+    <path>SplashScreen/FadeImage</path>
+    <effects>FadeEffect</effects>
+    <scale>
+      <X>640</X>
+      <Y>480</Y>
+    </scale>
+  </image>
+</ScreenManager>

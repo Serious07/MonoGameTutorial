@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Xml.Serialization;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 using Tutorial.Effects;
 using Tutorial.Utilities;
 
@@ -22,6 +23,11 @@ namespace Tutorial.Screens {
         public override void Update(GameTime gameTime) {
             base.Update(gameTime);
             image.Update(gameTime);
+
+            if(Keyboard.GetState().IsKeyDown(Keys.Enter) &&
+                ScreenManager.Instance.isTransitioning == false) {
+                ScreenManager.Instance.ChangeScreens("SplashScreen");
+            }
         }
 
         public override void UnloadContent() {
