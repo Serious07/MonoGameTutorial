@@ -9,16 +9,24 @@ namespace Tutorial
     /// </summary>
     public class Game1 : Game
     {
-        GraphicsDeviceManager graphics;
-        SpriteBatch spriteBatch;
+        private GraphicsDeviceManager graphics;
+        private SpriteBatch spriteBatch;
+        private FrameCounter _frameCounter;
+        private SpriteFont font;
+
+        // GameOptions
+        private bool vSinc = true;
 
         public Game1() {
+            _frameCounter = new FrameCounter();
+
             graphics = new GraphicsDeviceManager(this);
 
             // Start resolution
-            graphics.PreferredBackBufferWidth = 640;
-            graphics.PreferredBackBufferHeight = 480;
+            graphics.SynchronizeWithVerticalRetrace = vSinc;
             graphics.ApplyChanges();
+
+            IsFixedTimeStep = vSinc;
 
             Content.RootDirectory = "Content";
         }
@@ -31,6 +39,9 @@ namespace Tutorial
         /// </summary>
         protected override void Initialize() {
             // TODO: Add your initialization logic here
+            graphics.PreferredBackBufferWidth = (int)ScreenManager.Instance.Dimensions.X;
+            graphics.PreferredBackBufferHeight = (int)ScreenManager.Instance.Dimensions.Y;
+            graphics.ApplyChanges();
 
             base.Initialize();
         }
@@ -44,6 +55,9 @@ namespace Tutorial
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
+            ScreenManager.Instance.LoadContent(Content);
+
+            font = Content.Load<SpriteFont>("Fonts/defaultFont");
         }
 
         /// <summary>
@@ -52,6 +66,7 @@ namespace Tutorial
         /// </summary>
         protected override void UnloadContent() {
             // TODO: Unload any non ContentManager content here
+            ScreenManager.Instance.UnloadContent();
         }
 
         /// <summary>
@@ -64,6 +79,7 @@ namespace Tutorial
                 Exit();
 
             // TODO: Add your update logic here
+            ScreenManager.Instance.Update(gameTime);
 
             base.Update(gameTime);
         }
@@ -76,8 +92,20 @@ namespace Tutorial
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
+            ScreenManager.Instance.Draw(spriteBatch);
+            DrawFPSCounter(gameTime);
 
             base.Draw(gameTime);
+        }
+
+        public virtual void DrawFPSCounter(GameTime gameTime) {
+            var deltaTime = (float)gameTime.ElapsedGameTime.TotalSeconds;
+            _frameCounter.Update(deltaTime);
+            var fps = string.Format("FPS: {0}", _frameCounter.AverageFramesPerSecond);
+
+            spriteBatch.Begin();
+            spriteBatch.DrawString(font, fps, new Vector2(1, 1), Color.White);
+            spriteBatch.End();
         }
     }
 }
