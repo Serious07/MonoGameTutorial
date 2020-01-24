@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Tutorial.Utilities;
 
 namespace Tutorial
 {
@@ -54,7 +55,8 @@ namespace Tutorial
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            // TODO: use this.Content to load your game content here
+            ScreenManager.Instance.graphicsDevice = GraphicsDevice;
+            ScreenManager.Instance.spriteBatch = spriteBatch;
             ScreenManager.Instance.LoadContent(Content);
 
             font = Content.Load<SpriteFont>("Fonts/defaultFont");

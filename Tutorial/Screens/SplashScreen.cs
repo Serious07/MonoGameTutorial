@@ -3,34 +3,34 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Tutorial.Effects;
+using Tutorial.Utilities;
 
 namespace Tutorial.Screens {
     public class SplashScreen : GameScreen {
-        Texture2D image;
-        public string path;
+        public Image image;
 
         public override void LoadContent() {
             base.LoadContent();
-            image = content.Load<Texture2D>(path);
+            image.LoadContent();
+            image.fadeEffect.fadeSpeed = 0.5f;
         }
 
         public override void Update(GameTime gameTime) {
             base.Update(gameTime);
+            image.Update(gameTime);
         }
 
         public override void UnloadContent() {
             base.UnloadContent();
+            image.UnloadContent();
         }
 
         public override void Draw(SpriteBatch spriteBatch) {
-            Vector2 screenCenter = new Vector2(ScreenManager.Instance.Dimensions.X / 2f, 
-                                               ScreenManager.Instance.Dimensions.Y / 2f);
-            Vector2 imageCenter = new Vector2(image.Width / 2f, image.Height / 2f);
-
-            spriteBatch.Draw(image, screenCenter, null, Color.White, 0f, imageCenter, 
-                             1f, SpriteEffects.None, 0f);
+            image.Draw(spriteBatch);
         }
     }
 }

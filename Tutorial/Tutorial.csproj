@@ -40,7 +40,11 @@
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+  </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Effects\FadeEffect.cs" />
     <Compile Include="Utilities\FrameCounter.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Program.cs" />
@@ -48,6 +52,8 @@
     <Compile Include="Screens\GameScreen.cs" />
     <Compile Include="Screens\ScreenManager.cs" />
     <Compile Include="Screens\SplashScreen.cs" />
+    <Compile Include="Utilities\Image.cs" />
+    <Compile Include="Effects\ImageEffect.cs" />
     <Compile Include="Utilities\XmlManager.cs" />
   </ItemGroup>
   <ItemGroup>

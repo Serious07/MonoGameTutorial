@@ -1,4 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <SplashScreen>
-  <path>SplashScreen/Image</path>
+  <image>
+    <path>SplashScreen/Image</path>
+    <effects>FadeEffect</effects>
+    <isActive>true</isActive>
+    <position>
+      <X>70</X>
+      <Y>-20</Y>
+    </position>
+    <origin>
+      <X>256</X>
+      <Y>256</Y>
+    </origin>
+  </image>  
 </SplashScreen>

@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace Tutorial {
+namespace Tutorial.Utilities {
     public class FrameCounter {
         public FrameCounter() {
         }

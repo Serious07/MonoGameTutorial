@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Tutorial.Screens;
+using Tutorial.Effects;
 using Tutorial.Utilities;
 
 namespace Tutorial
@@ -18,6 +19,8 @@ namespace Tutorial
 
         private XmlManager<GameScreen> xmlGameScreenManager;
         private GameScreen currentScreen;
+        public GraphicsDevice graphicsDevice;
+        public SpriteBatch spriteBatch;
 
         private static ScreenManager instance;
 
