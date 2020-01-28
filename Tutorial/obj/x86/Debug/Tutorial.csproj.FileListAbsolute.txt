@@ -46,3 +46,4 @@ F:\Files\My_workshop\C#\MonoGame\Tutorial\MonoGameTutorial\Tutorial\SharpDX.Dire
 F:\Files\My_workshop\C#\MonoGame\Tutorial\MonoGameTutorial\Tutorial\SharpDX.Direct2D1.xml
 F:\Files\My_workshop\C#\MonoGame\Tutorial\MonoGameTutorial\Tutorial\SharpDX.XInput.xml
 F:\Files\My_workshop\C#\MonoGame\Tutorial\MonoGameTutorial\Tutorial\Content\SplashScreen\FadeImage.xnb
+F:\Files\My_workshop\C#\MonoGame\Tutorial\MonoGameTutorial\Tutorial\Content\Fonts\menuFont.xnb

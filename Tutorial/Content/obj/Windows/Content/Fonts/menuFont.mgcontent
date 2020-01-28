@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>F:/Files/My_workshop/C#/MonoGame/Tutorial/MonoGameTutorial/Tutorial/Content/Fonts/menuFont.spritefont</SourceFile>
+  <SourceTime>2020-01-28T21:52:42.2900804+07:00</SourceTime>
+  <DestFile>F:/Files/My_workshop/C#/MonoGame/Tutorial/MonoGameTutorial/Tutorial/Content/bin/Windows/Content/Fonts/menuFont.xnb</DestFile>
+  <DestTime>2020-01-28T21:52:45.941246+07:00</DestTime>
+  <Importer>FontDescriptionImporter</Importer>
+  <ImporterTime>2018-12-08T23:35:54+07:00</ImporterTime>
+  <Processor>FontDescriptionProcessor</Processor>
+  <ProcessorTime>2018-12-08T23:35:54+07:00</ProcessorTime>
+  <Parameters>
+    <Key>PremultiplyAlpha</Key>
+    <Value>True</Value>
+  </Parameters>
+  <Parameters>
+    <Key>TextureFormat</Key>
+    <Value>Compressed</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

@@ -20,6 +20,13 @@
 /processorParam:TextureFormat=Compressed
 /build:Fonts/defaultFont.spritefont
 
+#begin Fonts/menuFont.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:Fonts/menuFont.spritefont
+
 #begin SplashScreen/FadeImage.png
 /importer:TextureImporter
 /processor:TextureProcessor

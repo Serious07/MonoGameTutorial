@@ -15,6 +15,7 @@ namespace Tutorial.Utilities {
     public class Image {
         public float alpha;
         public string text, fontName, path;
+        public Color colorText;
         [XmlIgnore]
         public Texture2D texture;
         public Vector2 position, scale, origin;
@@ -56,8 +57,9 @@ namespace Tutorial.Utilities {
         }
 
         public Image() {
+            colorText = Color.Black;
             path = text = effects = string.Empty;
-            fontName = "Fonts/defaultFont";
+            fontName = "Fonts/menuFont";
             position = Vector2.Zero;
             scale = Vector2.One;
             alpha = 1.0f;
@@ -102,7 +104,7 @@ namespace Tutorial.Utilities {
             if (texture != null) {
                 ScreenManager.Instance.spriteBatch.Draw(texture, Vector2.Zero, Color.White);
             }
-            ScreenManager.Instance.spriteBatch.DrawString(font, text, Vector2.Zero, Color.White);
+            ScreenManager.Instance.spriteBatch.DrawString(font, text, Vector2.Zero, colorText);
             ScreenManager.Instance.spriteBatch.End();
 
             texture = renderTarget;

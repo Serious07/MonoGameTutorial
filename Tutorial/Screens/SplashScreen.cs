@@ -25,7 +25,7 @@ namespace Tutorial.Screens {
             image.Update(gameTime);
 
             if(InputManager.Instance.KeyRelesed(Keys.Enter, Keys.Z)) {
-                ScreenManager.Instance.ChangeScreens("SplashScreen");
+                ScreenManager.Instance.ChangeScreens("TitleScreen");
             }
         }
 

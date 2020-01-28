@@ -45,6 +45,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Effects\FadeEffect.cs" />
+    <Compile Include="Menu\Menu.cs" />
+    <Compile Include="Menu\MenuItem.cs" />
+    <Compile Include="Menu\MenuManager.cs" />
+    <Compile Include="Screens\TitleScreen.cs" />
     <Compile Include="Utilities\FrameCounter.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Program.cs" />
@@ -66,6 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Icon.ico" />
+    <Content Include="Load\Menu\TitleMenu.xml" />
     <Content Include="Load\ScreenManager.xml" />
     <Content Include="Load\SplashScreen.xml" />
   </ItemGroup>
